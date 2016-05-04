@@ -1,0 +1,35 @@
+%h1 Listing turmas
+
+%table
+  %thead
+    %tr
+      %th Nome Aluno
+      %th Nome Curso
+      %th Nome Professor
+      %th Turma
+      %th Sala
+      %th Data Início
+      %th Data Término
+      %th Turno
+      %th
+      %th
+      %th
+
+  %tbody
+    - @turmas.each do |turma|
+      %tr
+        %td= turma.inscricao.nome
+        %td= turma.curso.nome
+        %td= turma.professor.nome
+        %td= turma.turma
+        %td= turma.sala
+        %td= turma.data_ini
+        %td= turma.data_ter
+        %td= turma.turno
+        %td= link_to 'Show', turma
+        %td= link_to 'Edit', edit_turma_path(turma)
+        %td= link_to 'Destroy', turma, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Turma', new_turma_path

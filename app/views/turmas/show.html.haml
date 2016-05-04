@@ -1,0 +1,30 @@
+%p#notice= notice
+
+%p
+  %b Inscricao:
+  = @turma.inscricao.nome
+%p
+  %b Curso:
+  = @turma.curso.nome
+%p
+  %b Professor:
+  = @turma.professor.nome
+%p
+  %b Turma:
+  = @turma.turma
+%p
+  %b Sala:
+  = @turma.sala
+%p
+  %b Data ini:
+  = @turma.data_ini
+%p
+  %b Data ter:
+  = @turma.data_ter
+%p
+  %b Turno:
+  = @turma.turno
+
+= link_to 'Edit', edit_turma_path(@turma)
+\|
+= link_to 'Back', turmas_path

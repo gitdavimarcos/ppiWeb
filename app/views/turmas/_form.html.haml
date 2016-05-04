@@ -1,0 +1,15 @@
+= simple_form_for(@turma) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.association :inscricao, label: "Nome Aluno", label_method: :nome
+    = f.association :curso, label: "Nome Curso", label_method: :nome
+    = f.association :professor, label: "Nome Professor", label_method: :nome
+    = f.input :turma, label: "Turma"
+    = f.input :sala, label: "Sala"
+    = f.input :data_ini, label: "Data Início"
+    = f.input :data_ter, label: "Data Término"
+    = f.input :turno, label: "Turno"
+
+  .form-actions
+    = f.submit "Salvar"
