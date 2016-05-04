@@ -480,3 +480,853 @@ Migrating to CreateTurmas (20160504215147)
             FROM sqlite_temp_master
             WHERE name='index_turmas_on_inscricao_id' AND type='index'
 
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-04 19:30:55 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-04 19:31:25 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_navigation.html.haml (25.1ms)
+Completed 500 Internal Server Error in 394ms (ActiveRecord: 0.0ms)
+
+NameError - uninitialized constant ActionView::CompiledTemplates::Professores_path:
+  activesupport (4.2.6) lib/active_support/dependencies.rb:533:in `load_missing_constant'
+  activesupport (4.2.6) lib/active_support/dependencies.rb:184:in `const_missing'
+  app/views/layouts/_navigation.html.haml:4:in `_app_views_layouts__navigation_html_haml___4343036744802994229_47411067744260'
+  actionview (4.2.6) lib/action_view/template.rb:145:in `block in render'
+  activesupport (4.2.6) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.6) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.6) lib/action_view/template.rb:143:in `render'
+  actionview (4.2.6) lib/action_view/renderer/partial_renderer.rb:339:in `render_partial'
+  actionview (4.2.6) lib/action_view/renderer/partial_renderer.rb:310:in `block in render'
+  actionview (4.2.6) lib/action_view/renderer/abstract_renderer.rb:39:in `block in instrument'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  actionview (4.2.6) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  actionview (4.2.6) lib/action_view/renderer/partial_renderer.rb:309:in `render'
+  actionview (4.2.6) lib/action_view/renderer/renderer.rb:51:in `render_partial'
+  actionview (4.2.6) lib/action_view/helpers/rendering_helper.rb:35:in `render'
+  haml (4.0.7) lib/haml/helpers/action_view_mods.rb:10:in `block in render_with_haml'
+  haml (4.0.7) lib/haml/helpers.rb:89:in `non_haml'
+  haml (4.0.7) lib/haml/helpers/action_view_mods.rb:10:in `render_with_haml'
+  app/views/layouts/application.html.haml:12:in `_app_views_layouts_application_html_haml___2393151722624186211_47411075158520'
+  actionview (4.2.6) lib/action_view/template.rb:145:in `block in render'
+  activesupport (4.2.6) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.6) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.6) lib/action_view/template.rb:143:in `render'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:66:in `render_with_layout'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:14:in `render'
+  actionview (4.2.6) lib/action_view/renderer/renderer.rb:46:in `render_template'
+  actionview (4.2.6) lib/action_view/renderer/renderer.rb:27:in `render'
+  actionview (4.2.6) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.6) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.6) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.6) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.6) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.6) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/davi-bsi/.rbenv/versions/2.2.4/lib/ruby/2.2.0/benchmark.rb:303:in `realtime'
+  activesupport (4.2.6) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.6) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.6) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.2.6) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.6) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.6) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.6) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.6) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.6) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  thin (1.6.4) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.4) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.4) lib/thin/connection.rb:53:in `process'
+  thin (1.6.4) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.2.0.1) lib/eventmachine.rb:194:in `run'
+  thin (1.6.4) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.4) lib/thin/server.rb:162:in `start'
+  rack (1.6.4) lib/rack/handler/thin.rb:19:in `run'
+  rack (1.6.4) lib/rack/server.rb:286:in `start'
+  railties (4.2.6) lib/rails/commands/server.rb:80:in `start'
+  railties (4.2.6) lib/rails/commands/commands_tasks.rb:80:in `block in server'
+  railties (4.2.6) lib/rails/commands/commands_tasks.rb:75:in `server'
+  railties (4.2.6) lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+  railties (4.2.6) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:9:in `<top (required)>'
+  spring (1.7.1) lib/spring/client/rails.rb:28:in `call'
+  spring (1.7.1) lib/spring/client/command.rb:7:in `call'
+  spring (1.7.1) lib/spring/client.rb:30:in `run'
+  spring (1.7.1) bin/spring:49:in `<top (required)>'
+  spring (1.7.1) lib/spring/binstub.rb:11:in `<top (required)>'
+  /home/davi-bsi/.rbenv/versions/2.2.4/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+  bin/spring:13:in `<top (required)>'
+  bin/rails:3:in `<main>'
+
+
+
+Started POST "/__better_errors/833e7a5b8330243c/variables" for 127.0.0.1 at 2016-05-04 19:31:26 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-04 19:31:56 -0300
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.haml (3.6ms)
+  Rendered layouts/_messages.html.haml (1.1ms)
+Completed 200 OK in 73ms (Views: 72.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/inscricoes" for 127.0.0.1 at 2016-05-04 19:32:04 -0300
+Processing by InscricoesController#index as HTML
+  [1m[35mInscricao Load (0.2ms)[0m  SELECT "inscricoes".* FROM "inscricoes"
+  Rendered inscricoes/index.html.haml within layouts/application (4.9ms)
+  Rendered layouts/_navigation_links.html.erb (0.2ms)
+  Rendered layouts/_navigation.html.haml (2.5ms)
+  Rendered layouts/_messages.html.haml (0.7ms)
+Completed 200 OK in 54ms (Views: 48.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/professores" for 127.0.0.1 at 2016-05-04 19:32:08 -0300
+Processing by ProfessoresController#index as HTML
+  [1m[36mProfessor Load (0.2ms)[0m  [1mSELECT "professores".* FROM "professores"[0m
+  Rendered professores/index.html.haml within layouts/application (3.6ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.haml (1.0ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 38ms (Views: 36.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cursos" for 127.0.0.1 at 2016-05-04 19:32:09 -0300
+Processing by CursosController#index as HTML
+  [1m[35mCurso Load (0.1ms)[0m  SELECT "cursos".* FROM "cursos"
+  Rendered cursos/index.html.haml within layouts/application (2.8ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.haml (1.0ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 35ms (Views: 33.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/notas" for 127.0.0.1 at 2016-05-04 19:32:10 -0300
+Processing by NotasController#index as HTML
+  [1m[36mNota Load (0.1ms)[0m  [1mSELECT "notas".* FROM "notas"[0m
+  Rendered notas/index.html.haml within layouts/application (2.9ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.haml (1.5ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 34ms (Views: 31.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/turmas" for 127.0.0.1 at 2016-05-04 19:32:11 -0300
+Processing by TurmasController#index as HTML
+  [1m[35mTurma Load (0.2ms)[0m  SELECT "turmas".* FROM "turmas"
+  Rendered turmas/index.html.haml within layouts/application (3.5ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.haml (0.9ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 37ms (Views: 34.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-04 19:32:14 -0300
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.haml (1.0ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 28ms (Views: 26.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/inscricoes" for 127.0.0.1 at 2016-05-04 19:32:24 -0300
+Processing by InscricoesController#index as HTML
+  [1m[36mInscricao Load (0.1ms)[0m  [1mSELECT "inscricoes".* FROM "inscricoes"[0m
+  Rendered inscricoes/index.html.haml within layouts/application (0.7ms)
+  Rendered layouts/_navigation_links.html.erb (0.1ms)
+  Rendered layouts/_navigation.html.haml (1.0ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 26ms (Views: 25.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/inscricoes/new" for 127.0.0.1 at 2016-05-04 19:32:25 -0300
+Processing by InscricoesController#new as HTML
+  [1m[35mCurso Load (0.3ms)[0m  SELECT "cursos".* FROM "cursos"
+  Rendered inscricoes/_form.html.haml (325.9ms)
+  Rendered inscricoes/new.html.haml within layouts/application (327.6ms)
+  Rendered layouts/_navigation_links.html.erb (0.1ms)
+  Rendered layouts/_navigation.html.haml (2.0ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 366ms (Views: 361.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/inscricoes" for 127.0.0.1 at 2016-05-04 19:33:00 -0300
+Processing by InscricoesController#index as HTML
+  [1m[36mInscricao Load (0.3ms)[0m  [1mSELECT "inscricoes".* FROM "inscricoes"[0m
+  Rendered inscricoes/index.html.haml within layouts/application (1.3ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.haml (1.0ms)
+  Rendered layouts/_messages.html.haml (0.3ms)
+Completed 200 OK in 34ms (Views: 33.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cursos" for 127.0.0.1 at 2016-05-04 19:33:02 -0300
+Processing by CursosController#index as HTML
+  [1m[35mCurso Load (0.2ms)[0m  SELECT "cursos".* FROM "cursos"
+  Rendered cursos/index.html.haml within layouts/application (0.7ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.haml (0.9ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 33ms (Views: 32.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cursos/new" for 127.0.0.1 at 2016-05-04 19:33:03 -0300
+Processing by CursosController#new as HTML
+  [1m[36mProfessor Load (0.2ms)[0m  [1mSELECT "professores".* FROM "professores"[0m
+  Rendered cursos/_form.html.haml (23.2ms)
+  Rendered cursos/new.html.haml within layouts/application (25.1ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.haml (0.9ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 62ms (Views: 58.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cursos" for 127.0.0.1 at 2016-05-04 19:33:42 -0300
+Processing by CursosController#index as HTML
+  [1m[35mCurso Load (0.1ms)[0m  SELECT "cursos".* FROM "cursos"
+  Rendered cursos/index.html.haml within layouts/application (0.7ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.haml (1.4ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 33ms (Views: 32.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/professores" for 127.0.0.1 at 2016-05-04 19:33:48 -0300
+Processing by ProfessoresController#index as HTML
+  [1m[36mProfessor Load (0.1ms)[0m  [1mSELECT "professores".* FROM "professores"[0m
+  Rendered professores/index.html.haml within layouts/application (0.9ms)
+  Rendered layouts/_navigation_links.html.erb (0.1ms)
+  Rendered layouts/_navigation.html.haml (1.1ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 32ms (Views: 30.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/professores/new" for 127.0.0.1 at 2016-05-04 19:33:49 -0300
+Processing by ProfessoresController#new as HTML
+  Rendered professores/_form.html.haml (7.4ms)
+  Rendered professores/new.html.haml within layouts/application (9.2ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.haml (1.1ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 44ms (Views: 39.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/professores" for 127.0.0.1 at 2016-05-04 19:34:28 -0300
+Processing by ProfessoresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Wkw1kF+lsCjU5qedNEC778HUajXoQGqTDHOB74n92rj4Na+0yEic3niin0YAeTFurymdMNJPiokjrBp+6OcAVw==", "professor"=>{"nome"=>"Luiz Gustavo", "formacao"=>"Pós Graduação em Redes"}, "commit"=>"Salvar"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "professores" ("nome", "formacao", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "Luiz Gustavo"], ["formacao", "Pós Graduação em Redes"], ["created_at", "2016-05-04 22:34:28.697162"], ["updated_at", "2016-05-04 22:34:28.697162"]]
+  [1m[35m (245.3ms)[0m  commit transaction
+Redirected to http://localhost:3000/professores/1
+Completed 302 Found in 252ms (ActiveRecord: 245.8ms)
+
+
+Started GET "/professores/1" for 127.0.0.1 at 2016-05-04 19:34:28 -0300
+Processing by ProfessoresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1mSELECT  "professores".* FROM "professores" WHERE "professores"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered professores/show.html.haml within layouts/application (1.8ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.haml (0.9ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 43ms (Views: 35.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/professores" for 127.0.0.1 at 2016-05-04 19:34:30 -0300
+Processing by ProfessoresController#index as HTML
+  [1m[35mProfessor Load (0.2ms)[0m  SELECT "professores".* FROM "professores"
+  Rendered professores/index.html.haml within layouts/application (1.2ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.haml (0.9ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 32ms (Views: 30.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/professores/new" for 127.0.0.1 at 2016-05-04 19:34:33 -0300
+Processing by ProfessoresController#new as HTML
+  Rendered professores/_form.html.haml (5.8ms)
+  Rendered professores/new.html.haml within layouts/application (6.8ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.haml (0.9ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 32ms (Views: 31.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/professores" for 127.0.0.1 at 2016-05-04 19:35:13 -0300
+Processing by ProfessoresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ksglZRObREYY3GcOMGCPlcHW2M381/bYV6ioJfPY3X8wsb9BhHZosLSYX9UEWQUUrysvyMbYFsJ4dzO0ksIHkA==", "professor"=>{"nome"=>"Fábio Ducan", "formacao"=>"Mestrado em Informática Militar"}, "commit"=>"Salvar"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "professores" ("nome", "formacao", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["nome", "Fábio Ducan"], ["formacao", "Mestrado em Informática Militar"], ["created_at", "2016-05-04 22:35:13.983341"], ["updated_at", "2016-05-04 22:35:13.983341"]]
+  [1m[36m (228.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/professores/2
+Completed 302 Found in 233ms (ActiveRecord: 229.3ms)
+
+
+Started GET "/professores/2" for 127.0.0.1 at 2016-05-04 19:35:14 -0300
+Processing by ProfessoresController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mProfessor Load (0.1ms)[0m  SELECT  "professores".* FROM "professores" WHERE "professores"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered professores/show.html.haml within layouts/application (0.5ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.haml (0.9ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 30ms (Views: 28.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/professores" for 127.0.0.1 at 2016-05-04 19:35:15 -0300
+Processing by ProfessoresController#index as HTML
+  [1m[36mProfessor Load (0.2ms)[0m  [1mSELECT "professores".* FROM "professores"[0m
+  Rendered professores/index.html.haml within layouts/application (1.6ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.haml (1.0ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 29ms (Views: 27.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/professores/new" for 127.0.0.1 at 2016-05-04 19:35:17 -0300
+Processing by ProfessoresController#new as HTML
+  Rendered professores/_form.html.haml (5.4ms)
+  Rendered professores/new.html.haml within layouts/application (6.4ms)
+  Rendered layouts/_navigation_links.html.erb (0.2ms)
+  Rendered layouts/_navigation.html.haml (1.9ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 32ms (Views: 31.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/professores" for 127.0.0.1 at 2016-05-04 19:35:41 -0300
+Processing by ProfessoresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M307Mui3aMhS/WLITCuhxLMdVkQFQ/o0A7axYGp0GkqRBKEWf1pEPv65WhN4EitF3eChQT9MGi4saSrxC27ApQ==", "professor"=>{"nome"=>"Ana Silva", "formacao"=>"Técnica em Informática"}, "commit"=>"Salvar"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "professores" ("nome", "formacao", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "Ana Silva"], ["formacao", "Técnica em Informática"], ["created_at", "2016-05-04 22:35:41.784975"], ["updated_at", "2016-05-04 22:35:41.784975"]]
+  [1m[35m (261.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/professores/3
+Completed 302 Found in 265ms (ActiveRecord: 261.4ms)
+
+
+Started GET "/professores/3" for 127.0.0.1 at 2016-05-04 19:35:42 -0300
+Processing by ProfessoresController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1mSELECT  "professores".* FROM "professores" WHERE "professores"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered professores/show.html.haml within layouts/application (1.6ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.haml (0.9ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 44ms (Views: 42.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/professores" for 127.0.0.1 at 2016-05-04 19:35:43 -0300
+Processing by ProfessoresController#index as HTML
+  [1m[35mProfessor Load (0.2ms)[0m  SELECT "professores".* FROM "professores"
+  Rendered professores/index.html.haml within layouts/application (1.6ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.haml (1.6ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 40ms (Views: 39.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cursos" for 127.0.0.1 at 2016-05-04 19:36:05 -0300
+Processing by CursosController#index as HTML
+  [1m[36mCurso Load (0.2ms)[0m  [1mSELECT "cursos".* FROM "cursos"[0m
+  Rendered cursos/index.html.haml within layouts/application (0.9ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.haml (0.9ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 30ms (Views: 28.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cursos/new" for 127.0.0.1 at 2016-05-04 19:36:07 -0300
+Processing by CursosController#new as HTML
+  [1m[35mProfessor Load (0.2ms)[0m  SELECT "professores".* FROM "professores"
+  Rendered cursos/_form.html.haml (20.8ms)
+  Rendered cursos/new.html.haml within layouts/application (21.9ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.haml (0.9ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 53ms (Views: 52.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/cursos" for 127.0.0.1 at 2016-05-04 19:36:36 -0300
+Processing by CursosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"n42/XF7fGnqxg53jHR8+kBs9WsdBTVG7JQn/DNN+a8I99CV4yTI2jB3HpTgpJrQRdcCtwntCsaEK1mSdsmSxLQ==", "curso"=>{"nome"=>"Ruby on Rails", "descricao"=>"Programação Orientada a Objeto Aplicada.", "professor_id"=>"1"}, "commit"=>"Salvar"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "cursos" ("nome", "descricao", "professor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["nome", "Ruby on Rails"], ["descricao", "Programação Orientada a Objeto Aplicada."], ["professor_id", 1], ["created_at", "2016-05-04 22:36:36.054133"], ["updated_at", "2016-05-04 22:36:36.054133"]]
+  [1m[36m (171.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/cursos/1
+Completed 302 Found in 176ms (ActiveRecord: 172.1ms)
+
+
+Started GET "/cursos/1" for 127.0.0.1 at 2016-05-04 19:36:36 -0300
+Processing by CursosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCurso Load (0.3ms)[0m  SELECT  "cursos".* FROM "cursos" WHERE "cursos"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mProfessor Load (0.1ms)[0m  [1mSELECT  "professores".* FROM "professores" WHERE "professores"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered cursos/show.html.haml within layouts/application (9.5ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.haml (1.0ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 45ms (Views: 41.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cursos" for 127.0.0.1 at 2016-05-04 19:36:37 -0300
+Processing by CursosController#index as HTML
+  [1m[35mCurso Load (0.2ms)[0m  SELECT "cursos".* FROM "cursos"
+  [1m[36mProfessor Load (0.1ms)[0m  [1mSELECT  "professores".* FROM "professores" WHERE "professores"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered cursos/index.html.haml within layouts/application (1.8ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.haml (1.0ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 35ms (Views: 34.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cursos/new" for 127.0.0.1 at 2016-05-04 19:36:39 -0300
+Processing by CursosController#new as HTML
+  [1m[35mProfessor Load (0.3ms)[0m  SELECT "professores".* FROM "professores"
+  Rendered cursos/_form.html.haml (28.5ms)
+  Rendered cursos/new.html.haml within layouts/application (31.2ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.haml (1.3ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 72ms (Views: 70.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/cursos" for 127.0.0.1 at 2016-05-04 19:37:28 -0300
+Processing by CursosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pcvctVob/rC/br1LT9ZqDYM4oSFvRhoDyiSoayV7p6wHskaRzfbSRhMqhZB77+CM7cVWJFVJ+hnl+zP6RGF9Qw==", "curso"=>{"nome"=>"Introdução a Programação", "descricao"=>"Para alunos que estão iniciando", "professor_id"=>"2"}, "commit"=>"Salvar"}
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "cursos" ("nome", "descricao", "professor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["nome", "Introdução a Programação"], ["descricao", "Para alunos que estão iniciando"], ["professor_id", 2], ["created_at", "2016-05-04 22:37:28.299450"], ["updated_at", "2016-05-04 22:37:28.299450"]]
+  [1m[36m (211.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/cursos/2
+Completed 302 Found in 217ms (ActiveRecord: 212.3ms)
+
+
+Started GET "/cursos/2" for 127.0.0.1 at 2016-05-04 19:37:28 -0300
+Processing by CursosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mCurso Load (0.1ms)[0m  SELECT  "cursos".* FROM "cursos" WHERE "cursos"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mProfessor Load (0.1ms)[0m  [1mSELECT  "professores".* FROM "professores" WHERE "professores"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered cursos/show.html.haml within layouts/application (1.1ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.haml (0.9ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 36ms (Views: 34.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cursos" for 127.0.0.1 at 2016-05-04 19:37:29 -0300
+Processing by CursosController#index as HTML
+  [1m[35mCurso Load (0.2ms)[0m  SELECT "cursos".* FROM "cursos"
+  [1m[36mProfessor Load (0.1ms)[0m  [1mSELECT  "professores".* FROM "professores" WHERE "professores"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mProfessor Load (0.1ms)[0m  SELECT  "professores".* FROM "professores" WHERE "professores"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered cursos/index.html.haml within layouts/application (3.0ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.haml (0.9ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 33ms (Views: 32.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cursos/new" for 127.0.0.1 at 2016-05-04 19:37:31 -0300
+Processing by CursosController#new as HTML
+  [1m[36mProfessor Load (0.2ms)[0m  [1mSELECT "professores".* FROM "professores"[0m
+  Rendered cursos/_form.html.haml (16.9ms)
+  Rendered cursos/new.html.haml within layouts/application (17.6ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.haml (0.9ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 47ms (Views: 46.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/cursos" for 127.0.0.1 at 2016-05-04 19:38:10 -0300
+Processing by CursosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ekUw2jcY+gTvGKEsY6gvNOZb5Ft1yIceKRsCDj0aVrvYPKr+oPXW8kNcmfdXkaW1iKYTXk/HZwQGxJmfXACMVA==", "curso"=>{"nome"=>"UML", "descricao"=>"Estudos de projetos.", "professor_id"=>"3"}, "commit"=>"Salvar"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "cursos" ("nome", "descricao", "professor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "UML"], ["descricao", "Estudos de projetos."], ["professor_id", 3], ["created_at", "2016-05-04 22:38:10.744786"], ["updated_at", "2016-05-04 22:38:10.744786"]]
+  [1m[35m (209.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/cursos/3
+Completed 302 Found in 214ms (ActiveRecord: 210.1ms)
+
+
+Started GET "/cursos/3" for 127.0.0.1 at 2016-05-04 19:38:10 -0300
+Processing by CursosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCurso Load (0.1ms)[0m  [1mSELECT  "cursos".* FROM "cursos" WHERE "cursos"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mProfessor Load (0.1ms)[0m  SELECT  "professores".* FROM "professores" WHERE "professores"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered cursos/show.html.haml within layouts/application (1.2ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.haml (0.8ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 30ms (Views: 28.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/inscricoes" for 127.0.0.1 at 2016-05-04 19:38:12 -0300
+Processing by InscricoesController#index as HTML
+  [1m[36mInscricao Load (0.3ms)[0m  [1mSELECT "inscricoes".* FROM "inscricoes"[0m
+  Rendered inscricoes/index.html.haml within layouts/application (1.4ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.haml (1.2ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 35ms (Views: 34.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/inscricoes/new" for 127.0.0.1 at 2016-05-04 19:38:15 -0300
+Processing by InscricoesController#new as HTML
+  [1m[35mCurso Load (0.2ms)[0m  SELECT "cursos".* FROM "cursos"
+  Rendered inscricoes/_form.html.haml (11.2ms)
+  Rendered inscricoes/new.html.haml within layouts/application (12.1ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.haml (0.9ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 41ms (Views: 40.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/inscricoes" for 127.0.0.1 at 2016-05-04 19:38:45 -0300
+Processing by InscricoesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jeE+aaai0QbSb1mKdicvqmK9oIJRoMlY4Q9okGOuyWYvmKRNMU/98H4rYVFCHqUrDEBXh2uvKULO0PMBArQTiQ==", "inscricao"=>{"nome"=>"João Marcos", "endereco"=>"Rua Boa Morte", "telefone"=>"22 98778-9876", "cidade"=>"Campos", "curso_id"=>"1"}, "commit"=>"Salvar"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "inscricoes" ("nome", "endereco", "telefone", "cidade", "curso_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["nome", "João Marcos"], ["endereco", "Rua Boa Morte"], ["telefone", "22 98778-9876"], ["cidade", "Campos"], ["curso_id", 1], ["created_at", "2016-05-04 22:38:45.223122"], ["updated_at", "2016-05-04 22:38:45.223122"]]
+  [1m[36m (156.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/inscricoes/1
+Completed 302 Found in 163ms (ActiveRecord: 157.3ms)
+
+
+Started GET "/inscricoes/1" for 127.0.0.1 at 2016-05-04 19:38:45 -0300
+Processing by InscricoesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mInscricao Load (0.2ms)[0m  SELECT  "inscricoes".* FROM "inscricoes" WHERE "inscricoes"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCurso Load (0.2ms)[0m  [1mSELECT  "cursos".* FROM "cursos" WHERE "cursos"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered inscricoes/show.html.haml within layouts/application (5.8ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.haml (0.9ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 44ms (Views: 42.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/inscricoes" for 127.0.0.1 at 2016-05-04 19:38:48 -0300
+Processing by InscricoesController#index as HTML
+  [1m[35mInscricao Load (0.3ms)[0m  SELECT "inscricoes".* FROM "inscricoes"
+  [1m[36mCurso Load (0.1ms)[0m  [1mSELECT  "cursos".* FROM "cursos" WHERE "cursos"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered inscricoes/index.html.haml within layouts/application (4.0ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.haml (1.1ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 51ms (Views: 49.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/notas" for 127.0.0.1 at 2016-05-04 19:38:50 -0300
+Processing by NotasController#index as HTML
+  [1m[35mNota Load (0.1ms)[0m  SELECT "notas".* FROM "notas"
+  Rendered notas/index.html.haml within layouts/application (0.8ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.haml (0.9ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 28ms (Views: 27.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/notas/new" for 127.0.0.1 at 2016-05-04 19:38:51 -0300
+Processing by NotasController#new as HTML
+  [1m[36mInscricao Load (0.4ms)[0m  [1mSELECT "inscricoes".* FROM "inscricoes"[0m
+  [1m[35mCurso Load (0.2ms)[0m  SELECT "cursos".* FROM "cursos"
+  Rendered notas/_form.html.haml (32.8ms)
+  Rendered notas/new.html.haml within layouts/application (35.5ms)
+  Rendered layouts/_navigation_links.html.erb (0.1ms)
+  Rendered layouts/_navigation.html.haml (1.1ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 77ms (Views: 69.1ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/notas" for 127.0.0.1 at 2016-05-04 19:39:13 -0300
+Processing by NotasController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ImNwxzLr8OXJm6bw6nGiAU1K30MBevotWpANweaXZRqAGurjpQbcE2XfniveSCiAI7coRjt1Gjd1T5ZQh42/9Q==", "nota"=>{"inscricao_id"=>"1", "curso_id"=>"1", "nota"=>"", "frequencia"=>"10"}, "commit"=>"Salvar"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "notas" ("inscricao_id", "curso_id", "frequencia", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["inscricao_id", 1], ["curso_id", 1], ["frequencia", "10"], ["created_at", "2016-05-04 22:39:13.306805"], ["updated_at", "2016-05-04 22:39:13.306805"]]
+  [1m[36m (201.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/notas/1
+Completed 302 Found in 209ms (ActiveRecord: 202.1ms)
+
+
+Started GET "/notas/1" for 127.0.0.1 at 2016-05-04 19:39:13 -0300
+Processing by NotasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mNota Load (0.2ms)[0m  SELECT  "notas".* FROM "notas" WHERE "notas"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mInscricao Load (0.2ms)[0m  [1mSELECT  "inscricoes".* FROM "inscricoes" WHERE "inscricoes"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCurso Load (0.1ms)[0m  SELECT  "cursos".* FROM "cursos" WHERE "cursos"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered notas/show.html.haml within layouts/application (5.7ms)
+  Rendered layouts/_navigation_links.html.erb (0.1ms)
+  Rendered layouts/_navigation.html.haml (0.9ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 37ms (Views: 34.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/notas" for 127.0.0.1 at 2016-05-04 19:39:23 -0300
+Processing by NotasController#index as HTML
+  [1m[36mNota Load (0.4ms)[0m  [1mSELECT "notas".* FROM "notas"[0m
+  [1m[35mInscricao Load (0.1ms)[0m  SELECT  "inscricoes".* FROM "inscricoes" WHERE "inscricoes"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCurso Load (0.1ms)[0m  [1mSELECT  "cursos".* FROM "cursos" WHERE "cursos"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered notas/index.html.haml within layouts/application (4.9ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.haml (1.1ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 46ms (Views: 44.5ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/notas/1" for 127.0.0.1 at 2016-05-04 19:39:32 -0300
+Processing by NotasController#destroy as HTML
+  Parameters: {"authenticity_token"=>"0TaF9Q+Mys0+Yux6dsi2fxetSmCa1/G/sOUzJT6abI9zTx/RmGHmO5Im1KFC8Tz+eVC9ZaDYEaWfOqi0X4C2YA==", "id"=>"1"}
+  [1m[35mNota Load (0.1ms)[0m  SELECT  "notas".* FROM "notas" WHERE "notas"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "notas" WHERE "notas"."id" = ?  [["id", 1]]
+  [1m[36m (130.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/notas
+Completed 302 Found in 134ms (ActiveRecord: 131.1ms)
+
+
+Started GET "/notas" for 127.0.0.1 at 2016-05-04 19:39:33 -0300
+Processing by NotasController#index as HTML
+  [1m[35mNota Load (0.2ms)[0m  SELECT "notas".* FROM "notas"
+  Rendered notas/index.html.haml within layouts/application (5.5ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.haml (1.0ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 44ms (Views: 43.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/notas/new" for 127.0.0.1 at 2016-05-04 19:39:33 -0300
+Processing by NotasController#new as HTML
+  [1m[36mInscricao Load (0.2ms)[0m  [1mSELECT "inscricoes".* FROM "inscricoes"[0m
+  [1m[35mCurso Load (0.2ms)[0m  SELECT "cursos".* FROM "cursos"
+  Rendered notas/_form.html.haml (18.2ms)
+  Rendered notas/new.html.haml within layouts/application (19.0ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.haml (1.0ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 50ms (Views: 49.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/notas" for 127.0.0.1 at 2016-05-04 19:39:44 -0300
+Processing by NotasController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+IQ2ofX6k5AkqIAIOFgpZPFQe1vtYSYVenDHJuL+8e1a/ayFYhe/ZojsuNMMYaPln62MXtduxg9Vr1y3g+QrAg==", "nota"=>{"inscricao_id"=>"1", "curso_id"=>"1", "nota"=>"3.9", "frequencia"=>"10"}, "commit"=>"Salvar"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "notas" ("inscricao_id", "curso_id", "nota", "frequencia", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["inscricao_id", 1], ["curso_id", 1], ["nota", 3.9], ["frequencia", "10"], ["created_at", "2016-05-04 22:39:44.990176"], ["updated_at", "2016-05-04 22:39:44.990176"]]
+  [1m[36m (215.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/notas/2
+Completed 302 Found in 221ms (ActiveRecord: 216.3ms)
+
+
+Started GET "/notas/2" for 127.0.0.1 at 2016-05-04 19:39:45 -0300
+Processing by NotasController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mNota Load (0.1ms)[0m  SELECT  "notas".* FROM "notas" WHERE "notas"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mInscricao Load (0.1ms)[0m  [1mSELECT  "inscricoes".* FROM "inscricoes" WHERE "inscricoes"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCurso Load (0.0ms)[0m  SELECT  "cursos".* FROM "cursos" WHERE "cursos"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered notas/show.html.haml within layouts/application (1.5ms)
+  Rendered layouts/_navigation_links.html.erb (0.1ms)
+  Rendered layouts/_navigation.html.haml (0.9ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 34ms (Views: 32.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/notas" for 127.0.0.1 at 2016-05-04 19:39:48 -0300
+Processing by NotasController#index as HTML
+  [1m[36mNota Load (0.3ms)[0m  [1mSELECT "notas".* FROM "notas"[0m
+  [1m[35mInscricao Load (0.1ms)[0m  SELECT  "inscricoes".* FROM "inscricoes" WHERE "inscricoes"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCurso Load (0.1ms)[0m  [1mSELECT  "cursos".* FROM "cursos" WHERE "cursos"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered notas/index.html.haml within layouts/application (4.0ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.haml (1.0ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 38ms (Views: 36.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/turmas" for 127.0.0.1 at 2016-05-04 19:39:53 -0300
+Processing by TurmasController#index as HTML
+  [1m[35mTurma Load (0.3ms)[0m  SELECT "turmas".* FROM "turmas"
+  Rendered turmas/index.html.haml within layouts/application (1.7ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.haml (1.2ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 46ms (Views: 44.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/turmas/new" for 127.0.0.1 at 2016-05-04 19:39:55 -0300
+Processing by TurmasController#new as HTML
+  [1m[36mInscricao Load (0.2ms)[0m  [1mSELECT "inscricoes".* FROM "inscricoes"[0m
+  [1m[35mCurso Load (0.2ms)[0m  SELECT "cursos".* FROM "cursos"
+  [1m[36mProfessor Load (0.1ms)[0m  [1mSELECT "professores".* FROM "professores"[0m
+  Rendered turmas/_form.html.haml (28.7ms)
+  Rendered turmas/new.html.haml within layouts/application (30.9ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.haml (0.9ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 61ms (Views: 54.3ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/turmas" for 127.0.0.1 at 2016-05-04 19:40:30 -0300
+Processing by TurmasController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tz7jbreppuwlveKlmJmFo4OHjFeJtmZCfOTvv0TDLZIVR3lKIESKGon52n6soA8i7Xp7UrO5hlhTO3QuJdn3fQ==", "turma"=>{"inscricao_id"=>"1", "curso_id"=>"1", "professor_id"=>"1", "turma"=>"310", "sala"=>"A-12", "data_ini"=>"01/01/2016", "data_ter"=>"10/10/2016", "turno"=>"Noite"}, "commit"=>"Salvar"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "turmas" ("inscricao_id", "curso_id", "professor_id", "turma", "sala", "data_ini", "data_ter", "turno", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["inscricao_id", 1], ["curso_id", 1], ["professor_id", 1], ["turma", "310"], ["sala", "A-12"], ["data_ini", "01/01/2016"], ["data_ter", "10/10/2016"], ["turno", "Noite"], ["created_at", "2016-05-04 22:40:30.530091"], ["updated_at", "2016-05-04 22:40:30.530091"]]
+  [1m[35m (185.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/turmas/1
+Completed 302 Found in 191ms (ActiveRecord: 186.2ms)
+
+
+Started GET "/turmas/1" for 127.0.0.1 at 2016-05-04 19:40:30 -0300
+Processing by TurmasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTurma Load (0.2ms)[0m  [1mSELECT  "turmas".* FROM "turmas" WHERE "turmas"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mInscricao Load (0.1ms)[0m  SELECT  "inscricoes".* FROM "inscricoes" WHERE "inscricoes"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCurso Load (0.5ms)[0m  [1mSELECT  "cursos".* FROM "cursos" WHERE "cursos"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mProfessor Load (0.1ms)[0m  SELECT  "professores".* FROM "professores" WHERE "professores"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered turmas/show.html.haml within layouts/application (8.3ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.haml (0.8ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 48ms (Views: 45.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/turmas" for 127.0.0.1 at 2016-05-04 19:40:33 -0300
+Processing by TurmasController#index as HTML
+  [1m[36mTurma Load (0.2ms)[0m  [1mSELECT "turmas".* FROM "turmas"[0m
+  [1m[35mInscricao Load (0.1ms)[0m  SELECT  "inscricoes".* FROM "inscricoes" WHERE "inscricoes"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCurso Load (0.1ms)[0m  [1mSELECT  "cursos".* FROM "cursos" WHERE "cursos"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mProfessor Load (0.1ms)[0m  SELECT  "professores".* FROM "professores" WHERE "professores"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered turmas/index.html.haml within layouts/application (2.8ms)
+  Rendered layouts/_navigation_links.html.erb (0.1ms)
+  Rendered layouts/_navigation.html.haml (2.1ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 36ms (Views: 34.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/turmas" for 127.0.0.1 at 2016-05-04 19:41:06 -0300
+Processing by TurmasController#index as HTML
+  [1m[36mTurma Load (0.6ms)[0m  [1mSELECT "turmas".* FROM "turmas"[0m
+  [1m[35mInscricao Load (0.1ms)[0m  SELECT  "inscricoes".* FROM "inscricoes" WHERE "inscricoes"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCurso Load (0.1ms)[0m  [1mSELECT  "cursos".* FROM "cursos" WHERE "cursos"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mProfessor Load (0.4ms)[0m  SELECT  "professores".* FROM "professores" WHERE "professores"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered turmas/index.html.haml within layouts/application (6.2ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.haml (1.0ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 45ms (Views: 42.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/notas" for 127.0.0.1 at 2016-05-04 19:41:07 -0300
+Processing by NotasController#index as HTML
+  [1m[36mNota Load (0.2ms)[0m  [1mSELECT "notas".* FROM "notas"[0m
+  [1m[35mInscricao Load (0.1ms)[0m  SELECT  "inscricoes".* FROM "inscricoes" WHERE "inscricoes"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCurso Load (0.1ms)[0m  [1mSELECT  "cursos".* FROM "cursos" WHERE "cursos"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered notas/index.html.haml within layouts/application (3.2ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.haml (1.1ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 39ms (Views: 37.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cursos" for 127.0.0.1 at 2016-05-04 19:41:08 -0300
+Processing by CursosController#index as HTML
+  [1m[35mCurso Load (0.3ms)[0m  SELECT "cursos".* FROM "cursos"
+  [1m[36mProfessor Load (0.1ms)[0m  [1mSELECT  "professores".* FROM "professores" WHERE "professores"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mProfessor Load (0.1ms)[0m  SELECT  "professores".* FROM "professores" WHERE "professores"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mProfessor Load (0.1ms)[0m  [1mSELECT  "professores".* FROM "professores" WHERE "professores"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered cursos/index.html.haml within layouts/application (5.4ms)
+  Rendered layouts/_navigation_links.html.erb (0.1ms)
+  Rendered layouts/_navigation.html.haml (2.4ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 40ms (Views: 39.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/professores" for 127.0.0.1 at 2016-05-04 19:41:08 -0300
+Processing by ProfessoresController#index as HTML
+  [1m[35mProfessor Load (0.4ms)[0m  SELECT "professores".* FROM "professores"
+  Rendered professores/index.html.haml within layouts/application (4.1ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.haml (0.9ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 33ms (Views: 32.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/inscricoes" for 127.0.0.1 at 2016-05-04 19:41:09 -0300
+Processing by InscricoesController#index as HTML
+  [1m[36mInscricao Load (0.2ms)[0m  [1mSELECT "inscricoes".* FROM "inscricoes"[0m
+  [1m[35mCurso Load (0.1ms)[0m  SELECT  "cursos".* FROM "cursos" WHERE "cursos"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered inscricoes/index.html.haml within layouts/application (2.1ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.haml (0.9ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 33ms (Views: 32.0ms | ActiveRecord: 0.2ms)
