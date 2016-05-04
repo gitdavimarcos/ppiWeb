@@ -35,8 +35,7 @@ group :doc do
 end
 
 group :development, :test do
-gem 'byebug'
-  gem 'web-console', '~> 2.0'
+  gem 'byebug'
   gem 'sqlite3'
   gem 'factory_girl_rails'
   gem 'faker'
@@ -72,4 +71,5 @@ group :development do
   gem "rails_apps_testing"
   gem 'brakeman'
   gem 'spring'
+  gem 'web-console', '~> 2.0'
 end

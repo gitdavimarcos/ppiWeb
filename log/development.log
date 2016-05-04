@@ -31,3 +31,82 @@ Processing by VisitorsController#index as HTML
   Rendered layouts/_navigation.html.haml (0.9ms)
   Rendered layouts/_messages.html.haml (0.1ms)
 Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-04 16:45:20 -0300
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.haml (2.4ms)
+  Rendered layouts/_messages.html.haml (1.6ms)
+Completed 200 OK in 431ms (Views: 405.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-04 16:45:45 -0300
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.haml (2.6ms)
+  Rendered layouts/_messages.html.haml (1.1ms)
+Completed 200 OK in 58ms (Views: 56.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (125.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (142.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateProfessores (20160504194628)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "professores" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar, "formacao" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160504194628"]]
+  [1m[35m (131.8ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/professores" for 127.0.0.1 at 2016-05-04 16:47:22 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProfessoresController#index as HTML
+  [1m[35mProfessor Load (0.2ms)[0m  SELECT "professores".* FROM "professores"
+  Rendered professores/index.html.haml within layouts/application (7.7ms)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.haml (2.6ms)
+  Rendered layouts/_messages.html.haml (1.0ms)
+Completed 200 OK in 582ms (Views: 567.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/professores/new" for 127.0.0.1 at 2016-05-04 16:47:39 -0300
+Processing by ProfessoresController#new as HTML
+  Rendered professores/_form.html.haml (578.8ms)
+  Rendered professores/new.html.haml within layouts/application (580.7ms)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.haml (2.3ms)
+  Rendered layouts/_messages.html.haml (0.8ms)
+Completed 200 OK in 606ms (Views: 601.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/professores" for 127.0.0.1 at 2016-05-04 16:47:44 -0300
+Processing by ProfessoresController#index as HTML
+  [1m[36mProfessor Load (0.1ms)[0m  [1mSELECT "professores".* FROM "professores"[0m
+  Rendered professores/index.html.haml within layouts/application (2.4ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.haml (0.8ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 21ms (Views: 20.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/professores" for 127.0.0.1 at 2016-05-04 16:52:02 -0300
+Processing by ProfessoresController#index as HTML
+  [1m[35mProfessor Load (52.9ms)[0m  SELECT "professores".* FROM "professores"
+  Rendered professores/index.html.haml within layouts/application (101.2ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.haml (1.1ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 375ms (Views: 279.7ms | ActiveRecord: 52.9ms)
+
+
+Started GET "/professores/new" for 127.0.0.1 at 2016-05-04 16:52:07 -0300
+Processing by ProfessoresController#new as HTML
+  Rendered professores/_form.html.haml (27.4ms)
+  Rendered professores/new.html.haml within layouts/application (29.3ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.haml (0.8ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 55ms (Views: 54.4ms | ActiveRecord: 0.0ms)

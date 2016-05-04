@@ -1,0 +1,9 @@
+= simple_form_for(@professor) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :nome, label: "Nome Professor"
+    = f.input :formacao, label: "Formação"
+
+  .form-actions
+    = f.submit "Salvar"
