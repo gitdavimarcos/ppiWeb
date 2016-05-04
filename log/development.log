@@ -110,3 +110,83 @@ Processing by ProfessoresController#new as HTML
   Rendered layouts/_navigation.html.haml (0.8ms)
   Rendered layouts/_messages.html.haml (0.1ms)
 Completed 200 OK in 55ms (Views: 54.4ms | ActiveRecord: 0.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateCursos (20160504201556)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "cursos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar, "descricao" text, "professor_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "index_cursos_on_professor_id" ON "cursos" ("professor_id")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160504201556"]]
+  [1m[36m (202.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_cursos_on_professor_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_cursos_on_professor_id' AND type='index'
+[0m
+
+
+Started GET "/cursos" for 127.0.0.1 at 2016-05-04 17:19:17 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CursosController#index as HTML
+  [1m[35mCurso Load (0.1ms)[0m  SELECT "cursos".* FROM "cursos"
+  Rendered cursos/index.html.haml within layouts/application (4.7ms)
+  Rendered layouts/_navigation_links.html.erb (0.4ms)
+  Rendered layouts/_navigation.html.haml (3.1ms)
+  Rendered layouts/_messages.html.haml (1.4ms)
+Completed 200 OK in 797ms (Views: 730.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cursos" for 127.0.0.1 at 2016-05-04 17:19:51 -0300
+Processing by CursosController#index as HTML
+  [1m[36mCurso Load (0.2ms)[0m  [1mSELECT "cursos".* FROM "cursos"[0m
+  Rendered cursos/index.html.haml within layouts/application (5.9ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.haml (0.8ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 35ms (Views: 34.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cursos/new" for 127.0.0.1 at 2016-05-04 17:19:58 -0300
+Processing by CursosController#new as HTML
+  [1m[35mProfessor Load (0.2ms)[0m  SELECT "professores".* FROM "professores"
+  Rendered cursos/_form.html.haml (626.8ms)
+  Rendered cursos/new.html.haml within layouts/application (630.0ms)
+  Rendered layouts/_navigation_links.html.erb (0.2ms)
+  Rendered layouts/_navigation.html.haml (1.8ms)
+  Rendered layouts/_messages.html.haml (0.7ms)
+Completed 200 OK in 660ms (Views: 652.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/cursos" for 127.0.0.1 at 2016-05-04 17:32:45 -0300
+Processing by CursosController#index as HTML
+  [1m[36mCurso Load (31.1ms)[0m  [1mSELECT "cursos".* FROM "cursos"[0m
+  Rendered cursos/index.html.haml within layouts/application (34.8ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.haml (1.4ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 471ms (Views: 406.6ms | ActiveRecord: 31.1ms)
+
+
+Started GET "/cursos/new" for 127.0.0.1 at 2016-05-04 17:32:47 -0300
+Processing by CursosController#new as HTML
+  [1m[35mProfessor Load (0.5ms)[0m  SELECT "professores".* FROM "professores"
+  Rendered cursos/_form.html.haml (19.0ms)
+  Rendered cursos/new.html.haml within layouts/application (20.7ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.haml (0.8ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 56ms (Views: 54.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/cursos" for 127.0.0.1 at 2016-05-04 17:32:52 -0300
+Processing by CursosController#index as HTML
+  [1m[36mCurso Load (0.2ms)[0m  [1mSELECT "cursos".* FROM "cursos"[0m
+  Rendered cursos/index.html.haml within layouts/application (0.9ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.haml (0.8ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 26ms (Views: 25.2ms | ActiveRecord: 0.2ms)

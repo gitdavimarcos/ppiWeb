@@ -1,0 +1,25 @@
+%h1 Listing cursos
+
+%table
+  %thead
+    %tr
+      %th Nome Curso
+      %th Descrição Curso
+      %th Nome Professor
+      %th
+      %th
+      %th
+
+  %tbody
+    - @cursos.each do |curso|
+      %tr
+        %td= curso.nome
+        %td= curso.descricao
+        %td= curso.professor.nome
+        %td= link_to 'Show', curso
+        %td= link_to 'Edit', edit_curso_path(curso)
+        %td= link_to 'Destroy', curso, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Curso', new_curso_path
