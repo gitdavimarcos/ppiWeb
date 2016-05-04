@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Nome:
+  = @inscricao.nome
+%p
+  %b Endereco:
+  = @inscricao.endereco
+%p
+  %b Telefone:
+  = @inscricao.telefone
+%p
+  %b Cidade:
+  = @inscricao.cidade
+%p
+  %b Curso:
+  = @inscricao.curso.nome
+
+= link_to 'Edit', edit_inscricao_path(@inscricao)
+\|
+= link_to 'Back', inscricoes_path

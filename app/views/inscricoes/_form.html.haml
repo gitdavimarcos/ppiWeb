@@ -1,0 +1,12 @@
+= simple_form_for(@inscricao) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :nome, label: "Nome Aluno"
+    = f.input :endereco, label: "Nome Endereço"
+    = f.input :telefone, label: "Telefone"
+    = f.input :cidade, label: "Cidade"
+    = f.association :curso, label: "Nome Curso", label_method: :nome
+
+  .form-actions
+    = f.submit "Salvar"

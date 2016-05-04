@@ -190,3 +190,84 @@ Processing by CursosController#index as HTML
   Rendered layouts/_navigation.html.haml (0.8ms)
   Rendered layouts/_messages.html.haml (0.1ms)
 Completed 200 OK in 26ms (Views: 25.2ms | ActiveRecord: 0.2ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateInscricoes (20160504204626)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "inscricoes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar, "endereco" varchar, "telefone" varchar, "cidade" varchar, "curso_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "index_inscricoes_on_curso_id" ON "inscricoes" ("curso_id")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160504204626"]]
+  [1m[36m (143.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_cursos_on_professor_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_cursos_on_professor_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_inscricoes_on_curso_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_inscricoes_on_curso_id' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateInscricoes (20160504205335)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (12.0ms)[0m  [1mCREATE TABLE "inscricoes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar, "endereco" varchar, "telefone" varchar, "cidade" varchar, "curso_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "index_inscricoes_on_curso_id" ON "inscricoes" ("curso_id")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160504205335"]]
+  [1m[36m (160.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_cursos_on_professor_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_cursos_on_professor_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_inscricoes_on_curso_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_inscricoes_on_curso_id' AND type='index'
+
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-04 17:57:26 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.haml (2.9ms)
+  Rendered layouts/_messages.html.haml (1.4ms)
+Completed 200 OK in 762ms (Views: 722.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/inscricoes" for 127.0.0.1 at 2016-05-04 17:57:36 -0300
+Processing by InscricoesController#index as HTML
+  [1m[35mInscricao Load (0.2ms)[0m  SELECT "inscricoes".* FROM "inscricoes"
+  Rendered inscricoes/index.html.haml within layouts/application (6.8ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.haml (0.8ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 93ms (Views: 66.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/inscricoes/new" for 127.0.0.1 at 2016-05-04 17:57:44 -0300
+Processing by InscricoesController#new as HTML
+  [1m[36mCurso Load (0.2ms)[0m  [1mSELECT "cursos".* FROM "cursos"[0m
+  Rendered inscricoes/_form.html.haml (520.5ms)
+  Rendered inscricoes/new.html.haml within layouts/application (523.5ms)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.haml (2.2ms)
+  Rendered layouts/_messages.html.haml (1.7ms)
+Completed 200 OK in 562ms (Views: 551.6ms | ActiveRecord: 0.5ms)

@@ -1,0 +1,29 @@
+%h1 Listing inscricoes
+
+%table
+  %thead
+    %tr
+      %th Nome Aluno
+      %th Endereço
+      %th Telefone
+      %th Cidade
+      %th Nome Curso
+      %th
+      %th
+      %th
+
+  %tbody
+    - @inscricoes.each do |inscricao|
+      %tr
+        %td= inscricao.nome
+        %td= inscricao.endereco
+        %td= inscricao.telefone
+        %td= inscricao.cidade
+        %td= inscricao.curso.nome
+        %td= link_to 'Show', inscricao
+        %td= link_to 'Edit', edit_inscricao_path(inscricao)
+        %td= link_to 'Destroy', inscricao, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Inscricao', new_inscricao_path
