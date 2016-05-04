@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Inscricao:
+  = @nota.inscricao.nome
+%p
+  %b Curso:
+  = @nota.curso.nome
+%p
+  %b Nota:
+  = @nota.nota
+%p
+  %b Frequencia:
+  = @nota.frequencia
+
+= link_to 'Edit', edit_nota_path(@nota)
+\|
+= link_to 'Back', notas_path

@@ -1,0 +1,27 @@
+%h1 Listing notas
+
+%table
+  %thead
+    %tr
+      %th Nome Aluno
+      %th Nome Curso
+      %th Nota
+      %th Frequência
+      %th
+      %th
+      %th
+
+  %tbody
+    - @notas.each do |nota|
+      %tr
+        %td= nota.inscricao.nome
+        %td= nota.curso.nome
+        %td= nota.nota
+        %td= nota.frequencia
+        %td= link_to 'Show', nota
+        %td= link_to 'Edit', edit_nota_path(nota)
+        %td= link_to 'Destroy', nota, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Nota', new_nota_path
