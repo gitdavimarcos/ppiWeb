@@ -14,7 +14,7 @@ feature 'Gerenciar Professor' do
   scenario 'Excluir Professor' do 
     professor = FactoryGirl.create(:professor)
     visit professores_path
-    click_link('Destroy')
+    click_link('Excluir')
   end
 
   def preencher_e_verificar_professor

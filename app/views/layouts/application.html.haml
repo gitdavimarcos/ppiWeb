@@ -1,15 +1,19 @@
-!!!
 %html
   %head
-    %meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0"}
-    %title= content_for?(:title) ? yield(:title) : 'Ppi'
-    %meta{:name => "description", :content => "#{content_for?(:description) ? yield(:description) : 'Ppi'}"}
-    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
-    = javascript_include_tag 'application', 'data-turbolinks-track' => true
-    = csrf_meta_tags
+    %meta{:charset => "utf-8"}
+    %title= yield(:title) 
+    = stylesheet_link_tag "application"
+    = javascript_include_tag "application"
   %body
-    %header
-      = render 'layouts/navigation'
-    %main{:role => "main"}
-      = render 'layouts/messages'
-      = yield
+    %div{ :class => "shadow" }
+      %div{ :class => "conecta" }
+
+        %header{ :class => "header" }
+          = render 'layouts/navigation'
+        
+        %main{ :class => "main", :role =>"main"}
+          = yield
+          %footer{ :class => "foot" }
+            = render 'layouts/messages'
+
+

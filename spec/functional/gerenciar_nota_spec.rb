@@ -31,7 +31,7 @@ feature 'Gerenciar Nota' do
   scenario 'Excluir Nota' do #, :js => true  do
     nota = FactoryGirl.create(:nota, inscricao: @inscricao, curso: @curso)
     visit notas_path
-    click_link 'Destroy'
+    click_link 'Excluir'
   end
 
   def preencher(dados)

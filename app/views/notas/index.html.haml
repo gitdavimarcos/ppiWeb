@@ -1,4 +1,4 @@
-%h1 Listing notas
+%h1 :: LISTAGEM DE NOTAS ::
 
 %table
   %thead
@@ -18,10 +18,10 @@
         %td= nota.curso.nome
         %td= nota.nota
         %td= nota.frequencia
-        %td= link_to 'Show', nota
-        %td= link_to 'Edit', edit_nota_path(nota)
-        %td= link_to 'Destroy', nota, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        %td= link_to 'Mostrar', nota
+        %td= link_to 'Alterar', edit_nota_path(nota)
+        %td= link_to 'Excluir', nota, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
 
-= link_to 'New Nota', new_nota_path
+= link_to ':: Lançar Nota e Freqüencia::', new_nota_path

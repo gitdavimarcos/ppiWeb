@@ -1,4 +1,4 @@
-%h1 Listing turmas
+%h1 :: LISTAGEM DE TURMAS ::
 
 %table
   %thead
@@ -26,10 +26,10 @@
         %td= turma.data_ini
         %td= turma.data_ter
         %td= turma.turno
-        %td= link_to 'Show', turma
-        %td= link_to 'Edit', edit_turma_path(turma)
-        %td= link_to 'Destroy', turma, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        %td= link_to 'Mostrar', turma
+        %td= link_to 'Alterar', edit_turma_path(turma)
+        %td= link_to 'Excluir', turma, :method => :delete, :data => { :confirm => 'Tem certeza da exclusao?' }
 
 %br
 
-= link_to 'New Turma', new_turma_path
+= link_to ':: Registrar Turma ::', new_turma_path

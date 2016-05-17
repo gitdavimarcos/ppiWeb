@@ -1,5 +1,4 @@
-%h1 Listing professores
-
+%h1 :: LISTAGEM DE PROFESSORES ::
 %table
   %thead
     %tr
@@ -14,10 +13,10 @@
       %tr
         %td= professor.nome
         %td= professor.formacao
-        %td= link_to 'Show', professor
-        %td= link_to 'Edit', edit_professor_path(professor)
-        %td= link_to 'Destroy', professor, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        %td= link_to 'Mostrar', professor
+        %td= link_to 'Editar', edit_professor_path(professor)
+        %td= link_to 'Excluir', professor, :method => :delete, :data => { :confirm => 'Tem certeza da exclusao?' }
 
 %br
 
-= link_to 'New Professor', new_professor_path
+= link_to ':: Registrar Professor ::', new_professor_path

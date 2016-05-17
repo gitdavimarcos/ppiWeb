@@ -1,4 +1,4 @@
-%h1 Listing cursos
+%h1 :: LISTAGEM DE CURSOS :: 
 
 %table
   %thead
@@ -16,10 +16,10 @@
         %td= curso.nome
         %td= curso.descricao
         %td= curso.professor.nome
-        %td= link_to 'Show', curso
-        %td= link_to 'Edit', edit_curso_path(curso)
-        %td= link_to 'Destroy', curso, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        %td= link_to 'Mostrar', curso
+        %td= link_to 'Alterar', edit_curso_path(curso)
+        %td= link_to 'Excluir', curso, :method => :delete, :data => { :confirm => 'Tem certeza da exclusao?' }
 
 %br
 
-= link_to 'New Curso', new_curso_path
+= link_to ' ::Registrar Curso ::', new_curso_path

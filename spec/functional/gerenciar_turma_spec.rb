@@ -36,7 +36,7 @@ feature 'Gerenciar Turma' do
   scenario 'Excluir Turma' do #, :js => true  do
     turma = FactoryGirl.create(:turma, inscricao: @inscricao, curso: @curso, professor: @professor)
     visit turmas_path
-    click_link 'Destroy'
+    click_link 'Excluir'
   end
 
   def preencher(dados)

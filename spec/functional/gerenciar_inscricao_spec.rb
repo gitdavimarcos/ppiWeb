@@ -31,7 +31,7 @@ feature 'Gerenciar Inscrição' do
   scenario 'Excluir inscricao' do #, :js => true  do
     inscricao = FactoryGirl.create(:inscricao, curso: @curso)
     visit inscricoes_path
-    click_link 'Destroy'
+    click_link 'Excluir'
   end
 
   def preencher(dados)

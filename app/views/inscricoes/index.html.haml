@@ -1,4 +1,4 @@
-%h1 Listing inscricoes
+%h1 LISTAGEM DE INSCRIÇÕES
 
 %table
   %thead
@@ -20,10 +20,10 @@
         %td= inscricao.telefone
         %td= inscricao.cidade
         %td= inscricao.curso.nome
-        %td= link_to 'Show', inscricao
-        %td= link_to 'Edit', edit_inscricao_path(inscricao)
-        %td= link_to 'Destroy', inscricao, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        %td= link_to 'Mostrar', inscricao
+        %td= link_to 'Alterar', edit_inscricao_path(inscricao)
+        %td= link_to 'Excluir', inscricao, :method => :delete, :data => { :confirm => 'Tem certeza da exclusao?' }
 
 %br
 
-= link_to 'New Inscricao', new_inscricao_path
+= link_to ' :: Realizar Inscricao ::', new_inscricao_path

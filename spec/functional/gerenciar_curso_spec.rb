@@ -29,7 +29,7 @@ feature 'Gerenciar Curso' do
   scenario 'Excluir Curso' do #, :js => true  do
     curso = FactoryGirl.create(:curso, professor: @professor)
     visit cursos_path
-    click_link 'Destroy'
+    click_link 'Excluir'
   end
 
   def preencher(dados)
