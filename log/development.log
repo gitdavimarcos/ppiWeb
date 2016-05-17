@@ -5135,3 +5135,71 @@ Processing by InscricoesController#new as HTML
   Rendered layouts/_navigation.html.haml (1.2ms)
   Rendered layouts/_messages.html.haml (0.2ms)
 Completed 200 OK in 43ms (Views: 41.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-16 21:59:56 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.haml (3.1ms)
+  Rendered layouts/_messages.html.haml (0.9ms)
+Completed 200 OK in 278ms (Views: 269.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-16 22:00:51 -0300
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.haml (1.1ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 33ms (Views: 32.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cursos" for 127.0.0.1 at 2016-05-16 22:00:58 -0300
+Processing by CursosController#index as HTML
+  [1m[35mCurso Load (0.9ms)[0m  SELECT "cursos".* FROM "cursos"
+  [1m[36mProfessor Load (0.6ms)[0m  [1mSELECT  "professores".* FROM "professores" WHERE "professores"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mProfessor Load (0.1ms)[0m  SELECT  "professores".* FROM "professores" WHERE "professores"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mProfessor Load (0.1ms)[0m  [1mSELECT  "professores".* FROM "professores" WHERE "professores"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered cursos/index.html.haml within layouts/application (62.1ms)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.haml (5.6ms)
+  Rendered layouts/_messages.html.haml (2.6ms)
+Completed 200 OK in 125ms (Views: 113.4ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/cursos" for 127.0.0.1 at 2016-05-16 22:01:03 -0300
+Processing by CursosController#index as HTML
+  [1m[35mCurso Load (0.2ms)[0m  SELECT "cursos".* FROM "cursos"
+  [1m[36mProfessor Load (0.1ms)[0m  [1mSELECT  "professores".* FROM "professores" WHERE "professores"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mProfessor Load (0.1ms)[0m  SELECT  "professores".* FROM "professores" WHERE "professores"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mProfessor Load (0.0ms)[0m  [1mSELECT  "professores".* FROM "professores" WHERE "professores"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered cursos/index.html.haml within layouts/application (4.9ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.haml (1.5ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 51ms (Views: 50.0ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/cursos/3" for 127.0.0.1 at 2016-05-16 22:01:09 -0300
+Processing by CursosController#destroy as HTML
+  Parameters: {"authenticity_token"=>"inANFXyumqiF4RWR1llMlW+FzTUP+E9KA+pcoFfQA9Pgk+LPCdNfxm0RHKSDsBrdODyBE8mL5UPvIc1vJeqsoA==", "id"=>"3"}
+  [1m[35mCurso Load (0.6ms)[0m  SELECT  "cursos".* FROM "cursos" WHERE "cursos"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "cursos" WHERE "cursos"."id" = ?  [["id", 3]]
+  [1m[36m (150.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/cursos
+Completed 302 Found in 161ms (ActiveRecord: 151.7ms)
+
+
+Started GET "/cursos" for 127.0.0.1 at 2016-05-16 22:01:09 -0300
+Processing by CursosController#index as HTML
+  [1m[35mCurso Load (0.1ms)[0m  SELECT "cursos".* FROM "cursos"
+  [1m[36mProfessor Load (0.1ms)[0m  [1mSELECT  "professores".* FROM "professores" WHERE "professores"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mProfessor Load (0.1ms)[0m  SELECT  "professores".* FROM "professores" WHERE "professores"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered cursos/index.html.haml within layouts/application (6.1ms)
+  Rendered layouts/_navigation_links.html.erb (0.1ms)
+  Rendered layouts/_navigation.html.haml (1.0ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 34ms (Views: 33.0ms | ActiveRecord: 0.3ms)
